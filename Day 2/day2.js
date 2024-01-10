@@ -37,3 +37,20 @@ games.forEach((game, i) => {
 
 console.log(`Day 2 - Part 1 - Result is ${sum}`);
 console.timeEnd("Day 2 - Part 1");
+
+console.time("Day 2 - Part 2");
+sum = 0;
+games.forEach(game => {
+    const reds = getReds(game);
+    const greens = getGreens(game);
+    const blues = getBlues(game);
+
+    const totalReds = Math.max(...reds);
+    const totalGreens = Math.max(...greens);
+    const totalBlues = Math.max(...blues);
+
+    sum += totalBlues * totalGreens * totalReds;
+});
+
+console.log(`Day 2 - Part 2 - Result is ${sum}`);
+console.timeEnd("Day 2 - Part 2");
