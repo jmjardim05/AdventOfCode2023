@@ -139,8 +139,6 @@ const solvePart2 = () => {
             else
                 digit2 = engineSchematic[gear[0]].substring(gear[1] + 1).match(/\d+/g).shift();
         }
-        digit1 = digit1.replace(".", "");
-        digit2 = digit2.replace(".", "");
         sum += Number.parseInt(digit1) * Number.parseInt(digit2);
     });
     return sum;
